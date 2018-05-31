@@ -3,7 +3,9 @@ import logging
 from functools import partial
 from celery import task
 from django.contrib.auth.models import User
-from lms.djangoapps.instructor_task.tasks_helper import BaseInstructorTask, run_main_task, upload_csv_to_report_store
+from lms.djangoapps.instructor_task.tasks_base import BaseInstructorTask
+from lms.djangoapps.instructor_task.tasks_helper.runner import run_main_task
+from lms.djangoapps.instructor_task.tasks_base import upload_csv_to_report_store
 from lms.djangoapps.instructor_task.api_helper import submit_task
 
 from time import time
