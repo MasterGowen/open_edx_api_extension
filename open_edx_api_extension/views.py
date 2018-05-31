@@ -46,9 +46,9 @@ from enrollment.errors import (
     CourseModeNotFoundError, CourseEnrollmentExistsError
 )
 from enrollment.views import ApiKeyPermissionMixIn, EnrollmentCrossDomainSessionAuth, EnrollmentListView
-from instructor.views.api import require_level
-from instructor_task.api_helper import AlreadyRunningError
-from instructor_task.models import ReportStore
+from lms.djangoapps.instructor.views.api import require_level
+from lms.djangoapps.instructor_task.api_helper import AlreadyRunningError
+from lms.djangoapps.instructor_task.models import ReportStore
 
 
 from track import views as track_views
