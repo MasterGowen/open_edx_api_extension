@@ -1,4 +1,4 @@
-from django.conf import settings
+from openedx.core.release import RELEASE_LINE
 GINKGO = 'ginkgo'
 FICUS = 'ficus'
 SUPPORTED_RELEASES = (GINKGO, FICUS)
@@ -6,7 +6,7 @@ SUPPORTED_RELEASES = (GINKGO, FICUS)
 
 def current_release():
     try:
-        release = getattr(settings, 'EDX_RELEASE')
+        release = RELEASE_LINE
     except AttributeError:
         release = 'ficus'
     if release not in SUPPORTED_RELEASES:
